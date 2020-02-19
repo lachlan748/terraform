@@ -1,0 +1,6 @@
+venv
+*.zip
+.terraform
+terraform.tfstate*
+terraform
+__pycache__
