@@ -4,3 +4,4 @@ venv
 terraform.tfstate*
 terraform
 __pycache__
+*.pem
