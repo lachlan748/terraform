@@ -22,6 +22,11 @@ aws --profile <profile_name> configure
 aws --no-verify-ssl --profile <profile_name> iam get-user
 ```
 
+## Generate ssh public key
+```
+ssh-keygen -f terraform_ec2_key
+```
+
 ## Initiate Terraform
 ```
 terraform init

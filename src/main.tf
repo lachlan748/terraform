@@ -1,5 +1,6 @@
 provider "aws" {
    region = "eu-west-1"
+   secret_key = "var.secret_key"
    profile = "lachlan.falconer"
 }
 
@@ -52,6 +53,11 @@ resource "aws_security_group" "default" {
   }
 }
 
+resource "aws_key_pair" "terraform_ec2_key" {
+  key_name = "terraform_ec2_key"
+  public_key = file("terraform_ec2_key.pub")
+}
+
 resource "aws_instance" "web" {
   instance_type = "t2.micro"
 
@@ -65,7 +71,8 @@ resource "aws_instance" "web" {
   #
   # https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#KeyPairs:
   #
-  key_name = "var.key_name"
+  #key_name = "var.key_name"
+  key_name = "terraform_ec2_key"
 
   # Our Security group to allow HTTP and SSH access
   security_groups = ["${aws_security_group.default.name}"]

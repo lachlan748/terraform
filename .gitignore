@@ -5,3 +5,4 @@ terraform.tfstate*
 terraform
 __pycache__
 *.pem
+terraform_ec2_key
