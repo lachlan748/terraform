@@ -24,7 +24,6 @@ aws --no-verify-ssl --profile <profile_name> iam get-user
 
 ## Initiate Terraform
 ```
-terraform plan
 terraform init
 terraform plan
 terraform apply
