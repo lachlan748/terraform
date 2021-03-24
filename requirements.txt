@@ -1,5 +1,5 @@
 awscli==1.16.302
 python-dateutil==2.8.0
 PyYAML==5.1.2
-rsa==3.4.2
+rsa==4.1
 s3transfer==0.2.1
